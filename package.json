@@ -1,0 +1,11 @@
+{
+  "name": "express-template-generator",
+  "version": "1.0.0",
+  "description": "A template generator for express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Govind S",
+  "license": "ISC"
+}
