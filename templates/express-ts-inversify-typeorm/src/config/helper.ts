@@ -4,7 +4,7 @@ import { provide } from "inversify-binding-decorators";
 import { HELPER } from "../const/types";
 
 @provide(HELPER)
-class Helper implements IHelper {
+class Helper implements IHelper {// eslint-disable-line
     createSuccessResponse(body: any): successResponse {
         const response: successResponse = {
             status: body.status || 200,

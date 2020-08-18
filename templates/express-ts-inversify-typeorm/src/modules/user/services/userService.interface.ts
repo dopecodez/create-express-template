@@ -1,3 +1,3 @@
 export interface IUserService{
-    getRandomTest(): Promise<object>;
+    getRandomTest(): Promise<any>;
 }

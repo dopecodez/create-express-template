@@ -1,12 +1,11 @@
-import { inject } from "inversify";
-import { PROXY, USER_SERVICE } from '../../../const/types';
+import { USER_SERVICE } from '../../../const/types';
 import { provide } from "inversify-binding-decorators";
 import { IUserService } from "./userService.interface";
 
 @provide(USER_SERVICE)
-class UserService implements IUserService{
+class UserService implements IUserService{// eslint-disable-line
 
-    async getRandomTest(): Promise<Object>{
+    async getRandomTest(): Promise<any>{
         try{
             return {};
         }catch(error){

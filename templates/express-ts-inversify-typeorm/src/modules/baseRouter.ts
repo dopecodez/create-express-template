@@ -9,7 +9,7 @@ const router = Router();
 
 //Inject all new routes here and use them
 @provide(BASEROUTE)
-class BaseRouter implements IRouter{
+class BaseRouter implements IRouter{// eslint-disable-line
     @inject(USERROUTE) userRouter!: IRouter;
 
     get routes(){
