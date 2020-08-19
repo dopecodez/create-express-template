@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -rdf build/",
     "build": "npm run clean && mkdir build && babel . --ignore 'node_modules/*' --out-dir ./build",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,7 +18,6 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "google-auth-library": "^6.0.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "sequelize": "^5.21.6",
