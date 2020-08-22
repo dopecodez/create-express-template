@@ -33,7 +33,7 @@ const configureApiEndpoints = (app) => {
   // routerConfig.init(app);
   // define a route handler for the default home page
   app.get( "/", (req, res) => {
-    res.send( "Welcome to Invoice generator application! " );
+    res.send( "Welcome to express-create application! " );
   });
 };
 
