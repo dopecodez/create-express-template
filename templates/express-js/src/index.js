@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const routerConfig = require('./modules/index');
+const routerConfig = require('./modules/route');
 // TODO: add database configurations.
 const config = require('./config/config');
 const logger = require('./helpers/logger');

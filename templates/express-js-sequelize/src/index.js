@@ -2,11 +2,12 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const routerConfig = require('./modules/index');
+const routerConfig = require('./modules/route');
 // TODO: add database configurations.
 const config = require('./config/config');
 const logger = require('./helpers/logger');
 const port = config.PORT || 3000;
+const sequelize = require('./models/index')
 
 const init = () => {
   // *** express instance *** //
@@ -29,11 +30,12 @@ const setupStandardMiddlewares = (app) => {
 };
 
 const configureApiEndpoints = (app) => {
+  //creates tables if it does not exist in database
+  sequelize.sync();
   app.use("/api/v1/", routerConfig.init());
-  // routerConfig.init(app);
   // define a route handler for the default home page
   app.get( "/", (req, res) => {
-    res.send( "Welcome to Invoice generator application! " );
+    res.send( "Welcome to express-create application!" );
   });
 };
 
