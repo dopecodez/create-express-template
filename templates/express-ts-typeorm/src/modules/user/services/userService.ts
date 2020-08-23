@@ -1,10 +1,11 @@
+//Uncomment the code in this file to see typeorm in work
+
 import { IUserService } from "./userService.interface";
 // import { User } from "../../../models/entities/Users";
 // import { EntityManager, getManager } from "typeorm";
 
 class UserService implements IUserService {// eslint-disable-line
 
-    // Uncomment if you want to see how typeorm works
     // private manager: EntityManager;
     // constructor() {
     //     this.manager = getManager();

@@ -14,7 +14,6 @@ class UserRouter implements IRouter{// eslint-disable-line
     get routes(){
         router.get('/', async (req: Request, res: Response) => {
             try {
-                console.log('this hits and returns')
                 const quote = await this.userService.getRandomTest();
                 return res.send(quote);
             } catch (err) {

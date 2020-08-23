@@ -12,7 +12,7 @@ import { connectToDatabase } from '../config/db';
 class Server implements ServerInterface {// eslint-disable-line
   @inject(BASEROUTE) private baseRouter!: IRouter
 
-  constructor(){
+  constructor() {
     connectToDatabase()
   }
 
@@ -22,6 +22,10 @@ class Server implements ServerInterface {// eslint-disable-line
     app.use(express.urlencoded({ extended: true }));
     app.use(cookieParser());
     app.use('/api/v1', this.baseRouter.routes);//setting up base route
+    // define a route handler for the default home page
+    app.get("/", (req, res) => {
+      res.send("Welcome to express-create application! ");
+    });
     app.use(cors());
     return app;
   }
