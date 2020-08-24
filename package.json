@@ -2,7 +2,7 @@
   "name": "express-template-generator",
   "version": "1.0.0",
   "description": "A template generator for express",
-  "main": "index.js",
+  "bin": "source/cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +10,12 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.7.0",
-    "@types/inquirer": "^7.3.1",
-    "@types/node": "^14.6.0"
+    "meow": "^6.0.0"
   },
   "dependencies": {
     "inquirer": "^7.3.3",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "@types/inquirer": "^7.3.1",
+    "@types/node": "^14.6.0"
   }
 }
