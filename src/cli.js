@@ -54,7 +54,7 @@ const cli = meow(`
 
     console.log(); // Prints a newline for readability
 	// eslint-disable-next-line no-unused-vars
-	const created = await create(options.version, options);
+	const created = await create(options);
 })().catch(error => {
 	console.error(`\n${logSymbols.error} ${error.message}`);
 	process.exit(1);
