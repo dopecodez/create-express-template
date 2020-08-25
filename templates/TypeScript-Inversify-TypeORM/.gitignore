@@ -2,5 +2,3 @@
 /dist
 /*.log
 .vscode
-package-lock.json
-yarn.lock
