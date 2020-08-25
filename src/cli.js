@@ -1,5 +1,5 @@
 const meow = require('meow');
-const np = require('.');
+const create = require('.');
 
 const cli = meow(`
 	Usage
@@ -49,9 +49,13 @@ const cli = meow(`
 
 	const options = await ui({
 		...flags,
-		destinationFolder
+		destFolder
     });
 
     console.log(); // Prints a newline for readability
-	const newPkg = await create(options.version, options);
-})
+	// eslint-disable-next-line no-unused-vars
+	const created = await create(options.version, options);
+})().catch(error => {
+	console.error(`\n${logSymbols.error} ${error.message}`);
+	process.exit(1);
+});

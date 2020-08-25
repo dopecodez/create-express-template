@@ -1,12 +1,14 @@
 const fs= require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
+const util = require('./util');
 
 module.exports = async (options, destinationFolder) => {
     const pkgManager = options.yarn ? 'yarn' : 'npm';
     let template = options.default ? 'TypeScript' : null;
     template = options.template ? options.template : template;
     const choices = fs.readdirSync(path.join(__dirname, 'templates'));
+    template = template ? util.isValidTemplate(template, choices) : null;
 
     if (destinationFolder && template) {
         return {
