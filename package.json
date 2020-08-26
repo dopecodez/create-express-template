@@ -1,19 +1,21 @@
 {
-  "name": "express-template-generator",
+  "name": "create-express-app",
   "version": "1.0.0",
   "description": "A template generator for express",
-  "bin": "source/cli.js",
+  "bin": {
+    "create-express-app": "src/cli.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/cli.js"
   },
   "author": "Govind S",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^7.3.3",
-    "typescript": "^3.8.3",
     "meow": "^6.0.0",
     "log-symbols": "^3.0.0"
-  },  
+  },
   "devDependencies": {
     "eslint": "^7.7.0"
   }

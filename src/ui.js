@@ -9,7 +9,6 @@ module.exports = async (options, destinationFolder) => {
     template = options.template ? options.template : template;
     const choices = fs.readdirSync(path.join(__dirname, 'templates'));
     template = template ? util.isValidTemplate(template, choices) : null;
-
     if (destinationFolder && template) {
         return {
             ...options,
@@ -23,19 +22,20 @@ module.exports = async (options, destinationFolder) => {
         {
             name: 'name',
             type: 'input',
-            when: () => destinationFolder ? true : false,
+            when: destinationFolder => destinationFolder ? true : false,
             message: 'Project name:'
         },
         {
             name: 'template',
             type: 'list',
-            when: template ? true : false,
+            when: template => template ? true : false,
             message: 'What project template would you like to generate?',
             choices: choices
         }];
-
+    
     const answers = await inquirer.prompt(prompts);
-
+    
+    console.log("ibdemmmm adicha");
 	return {
         ...options,
         pkgManager: pkgManager,

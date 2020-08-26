@@ -1,5 +1,8 @@
+#!/usr/bin/env node
 const meow = require('meow');
 const create = require('.');
+const ui = require('./ui');
+const logSymbols = require('log-symbols')
 
 const cli = meow(`
 	Usage
@@ -55,6 +58,7 @@ const cli = meow(`
     console.log(); // Prints a newline for readability
 	// eslint-disable-next-line no-unused-vars
 	const created = await create(options);
+	console.log(`\n${logSymbols.success} Successfully created template`);
 })().catch(error => {
 	console.error(`\n${logSymbols.error} ${error.message}`);
 	process.exit(1);
