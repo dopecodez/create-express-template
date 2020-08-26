@@ -18,28 +18,29 @@ module.exports = async (options, destinationFolder) => {
         };
     }
 
-    const prompts = [
-        {
+    const prompts = [];
+    if (!destinationFolder) {
+        prompts.push({
             name: 'name',
             type: 'input',
-            when: destinationFolder => destinationFolder ? true : false,
             message: 'Project name:'
-        },
-        {
+        });
+    }
+    if (template == null) {
+        prompts.push({
             name: 'template',
             type: 'list',
-            when: template => template ? true : false,
             message: 'What project template would you like to generate?',
             choices: choices
-        }];
+        });
+    }
     
     const answers = await inquirer.prompt(prompts);
     
-    console.log("ibdemmmm adicha");
 	return {
         ...options,
         pkgManager: pkgManager,
-		destinationFolder: answers.name,
-		template: answers.template,
+		destinationFolder: answers.name || destinationFolder,
+		template: answers.template || template,
 	};
 };

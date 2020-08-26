@@ -1,5 +1,5 @@
 const fs = require('fs');
-const templates = require('./templateMapping');
+const templates = require('./templateMapping').templateMapping;
 const path = require('path');
 
 exports.createProject = projectPath => {
@@ -39,8 +39,6 @@ exports.createDirectoryContents = (templatePath, projectName) => {
 }
 
 exports.isValidTemplate = (template, choices) => {
-    console.log(choices);
-    console.log("vaa vaa")
     if (choices.includes(template)) {
         return template;
     } else {

@@ -50,10 +50,10 @@ const cli = meow(`
 
 	const destFolder = cli.input.length > 0 ? cli.input[0] : false;
 
-	const options = await ui({
-		...flags,
+	const options = await ui(
+		{...flags},
 		destFolder
-    });
+    );
 
     console.log(); // Prints a newline for readability
 	// eslint-disable-next-line no-unused-vars
