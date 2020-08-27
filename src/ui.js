@@ -41,6 +41,6 @@ module.exports = async (options, destinationFolder) => {
         ...options,
         pkgManager: pkgManager,
 		destinationFolder: answers.name || destinationFolder,
-		template: answers.template || template,
+		template: answers.template || template
 	};
 };

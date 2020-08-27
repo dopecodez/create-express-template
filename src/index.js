@@ -1,15 +1,18 @@
 const path = require('path');
 const util = require('./util');
-const editJsonFile = require("edit-json-file");
+const create = require('./create')
+const logSymbols = require('log-symbols')
 
 module.exports = async (input) => {
     const CURR_DIR = process.cwd();
     const templatePath = path.join(__dirname, 'templates', input.template);
     const targetPath = path.join(CURR_DIR, input.destinationFolder);
-    if (util.createProject(targetPath)) {
-        util.createDirectoryContents(templatePath, input.destinationFolder);
+    if (create.createProject(targetPath)) {
+        create.createDirectoryContents(templatePath, input.destinationFolder);
     }
-    let file = editJsonFile(`${targetPath}/package.json`, {autosave:true});
-    file.set("name", input.destinationFolder);
+    console.log(`\n${logSymbols.success} Created template`);
+    console.log(`Installing dependecies using ${input.pkgManager}...`);
+    util.editPackageJson(`${targetPath}/package.json`, input.destinationFolder);
+    await util.installNodeModules(input.pkgManager, targetPath);
     return;
 }
