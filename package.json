@@ -1,7 +1,7 @@
 {
   "name": "create-express-app",
   "version": "1.0.0",
-  "description": "A template generator for express",
+  "description": "Create an express app template",
   "bin": {
     "create-express-app": "src/cli.js"
   },
@@ -12,9 +12,10 @@
   "author": "Govind S",
   "license": "ISC",
   "dependencies": {
+    "edit-json-file": "^1.4.1",
     "inquirer": "^7.3.3",
-    "meow": "^6.0.0",
-    "log-symbols": "^3.0.0"
+    "log-symbols": "^3.0.0",
+    "meow": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^7.7.0"

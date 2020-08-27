@@ -6,9 +6,9 @@ const logSymbols = require('log-symbols')
 
 const cli = meow(`
 	Usage
-	  $ create-express-app <folderName>
+	  $ create-express-app <FolderName>
 
-	  Version can be:
+	  FolderName can be:
 	    Folder name can be anything without a space
 
 	Options
@@ -20,7 +20,7 @@ const cli = meow(`
 	  $ create-express-app
 	  $ create-express-app my-app
 	  $ create-express-app my-app -d
-	  $ create-express-app my-app template="TypeScript-Inversify-TypeORM" -y
+	  $ create-express-app my-app --template="TypeScript-Inversify-TypeORM" -y
 `, {
 	flags: {
 		template: {
