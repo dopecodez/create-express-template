@@ -6,7 +6,7 @@
     "create-express-app": "src/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava",
     "start": "node src/cli.js"
   },
   "author": "Govind S",
@@ -19,6 +19,14 @@
     "meow": "^6.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.7.0"
+    "eslint": "^7.7.0",
+    "ava": "^3.8.2"
+  },
+  "ava": {
+    "files": [
+      "test/*",
+      "!test/cliTester.js"
+    ],
+    "timeout": "1m"
   }
 }
