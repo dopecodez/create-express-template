@@ -1,12 +1,12 @@
 {
-  "name": "invoicegenerator",
+  "name": "javascript-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src/**/*.js",
     "start": "npm run lint && node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "author": "",
   "license": "ISC",
@@ -18,10 +18,16 @@
     "fs": "0.0.1-security",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
-    "winston": "^3.2.1",
-    "winston-daily-rotate-file": "^4.4.2"
+    "winston": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "ava": "^3.8.2"
+  },
+  "ava": {
+    "files": [
+      "test/*"
+    ],
+    "timeout": "1m"
   }
 }

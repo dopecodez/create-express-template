@@ -1,5 +1,6 @@
 import { Environment } from './config/environment';
-import server from './server/app'
+import server from './server/app';
+import { logger } from './helpers/logger'
 /**
  * Setuping environment variables
  */
@@ -12,9 +13,10 @@ import { config } from './config/config';
 
 async function startServer() {
     const app: Application = await server.server();
-    app.listen(config.SERVER_PORT, () =>
-        console.log(`Listening on port ${config.SERVER_PORT} in ${config.NODE_ENV} mode`)
-    );
+    app.listen(config.SERVER_PORT, () => {
+        console.log(`Listening on port ${config.SERVER_PORT} in ${config.NODE_ENV} mode`);
+        logger.info(`Listening on port ${config.SERVER_PORT} in ${config.NODE_ENV} mode`);
+    });
 }
 
 startServer();

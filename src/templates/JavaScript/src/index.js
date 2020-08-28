@@ -3,10 +3,8 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const routerConfig = require('./modules/route');
-// TODO: add database configurations.
 const config = require('./config/config');
-const logger = require('./helpers/logger');
-const port = config.PORT || 3000;
+const { logger } = require('./helpers/logger');
 
 const init = () => {
   // *** express instance *** //
@@ -14,9 +12,9 @@ const init = () => {
   // Configuraing the standard middlewares.
   setupStandardMiddlewares(app);
   configureApiEndpoints(app);
-  app.listen(port);
-  console.log(`App listening in port : ${port}`);
-  logger.info(`App listening in port : ${port}`);
+  app.listen(config.SERVER_PORT);
+  console.log(`Listening on port ${config.SERVER_PORT} in ${config.NODE_ENV} mode`);
+  logger.info(`Listening on port ${config.SERVER_PORT} in ${config.NODE_ENV} mode`)
 };
 
 const setupStandardMiddlewares = (app) => {

@@ -1,7 +1,7 @@
 'use strict';
 
-const router = require('express').Router(),
-    userService = require("./userService");
+const router = require('express').Router();
+const userService = require("./userService");
 
 /* GET max no: of strings. */
 router.get('/', async function (req, res) {
