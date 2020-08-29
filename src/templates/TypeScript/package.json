@@ -2,13 +2,11 @@
   "name": "test-app",
   "version": "0.0.0",
   "scripts": {
-    "build": "node ./util/build.js",
+    "build": "tsc --build --clean && tsc",
     "lint": "eslint src/**/*.ts",
-    "prestart": "npm run build",
-    "start": "npm run lint && npm run compile && npm run dev",
-    "test": "tsc --noEmit && ava",
-    "dev": "node ./dist/index.js",
-    "compile": "tsc -p ."
+    "start": "npm run lint && npm run build && npm run dev",
+    "test": "npm run build && ava",
+    "dev": "node ./dist/src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

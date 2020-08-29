@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { IRouter } from './router.interface';
-import userRouter from '../modules/user/routes/userRouter'
+import userRouter from './user/userRouter'
 
 // Init router
 const router = Router();

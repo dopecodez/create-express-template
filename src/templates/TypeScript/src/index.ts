@@ -5,7 +5,6 @@ import { logger } from './helpers/logger'
  * Setuping environment variables
  */
 Environment.setup();
-import 'reflect-metadata';
 
 import { Application } from 'express';
 
