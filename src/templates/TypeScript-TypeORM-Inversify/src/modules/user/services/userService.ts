@@ -1,11 +1,12 @@
 //Uncomment the code in this file to see typeorm in work
-import { USER_SERVICE } from '../../../const/types';
+import { USERSERVICE } from '../../../const/types';
 import { provide } from "inversify-binding-decorators";
 import { IUserService } from "./userService.interface";
+import { logger } from '../../../helpers/logger';
 // import { User } from "../../../models/entities/Users";
 // import { EntityManager, getManager } from "typeorm";
 
-@provide(USER_SERVICE)
+@provide(USERSERVICE)
 class UserService implements IUserService{// eslint-disable-line
 
     // private manager: EntityManager;
@@ -16,11 +17,12 @@ class UserService implements IUserService{// eslint-disable-line
     async getRandomTest(): Promise<any> {
         try {
             // const user = new User();
-            // user.firstName = "Gree"
+            // user.firstName = "Test"
             // this.manager.save(user);
+            logger.info("success")
             return "it works";
         } catch (error) {
-            console.log(error);
+            logger.error("success")
             return error;
         }
     }

@@ -13,7 +13,8 @@
     "baseUrl": "."
   },
   "include": [
-    "src/**/*.ts"
+    "src",
+    "test"
   ],
   "exclude": [
     "node_modules"

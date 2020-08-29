@@ -1,6 +1,6 @@
 import { createConnection } from 'typeorm';
 import { config } from './config';
-import { logger } from './logger';
+import { logger } from '../helpers/logger';
 
 export async function connectToDatabase() {
     try {

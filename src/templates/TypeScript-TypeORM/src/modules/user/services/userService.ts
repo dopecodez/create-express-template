@@ -20,7 +20,7 @@ class UserService implements IUserService {// eslint-disable-line
             logger.info("success")
             return "it works";
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return error;
         }
     }

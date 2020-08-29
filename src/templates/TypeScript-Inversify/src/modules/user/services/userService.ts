@@ -1,16 +1,18 @@
-import { USER_SERVICE } from '../../../const/types';
+import { USERSERVICE } from '../../../const/types';
 import { provide } from "inversify-binding-decorators";
 import { IUserService } from "./userService.interface";
+import { logger } from '../../../helpers/logger';
 
-@provide(USER_SERVICE)
+@provide(USERSERVICE)
 class UserService implements IUserService{// eslint-disable-line
 
     async getRandomTest(): Promise<any> {
         try {
             //logic here
+            logger.info("success")
             return "it works";
         } catch (error) {
-            console.log(error);
+            logger.info(error)
             return error;
         }
     }
