@@ -6,7 +6,7 @@ const logSymbols = require('log-symbols')
 
 const cli = meow(`
 	Usage
-	  $ create-express-app <FolderName>
+	  $ create-express-template <FolderName>
 
 	  FolderName can be:
 	    Folder name can be anything without a space
@@ -14,7 +14,7 @@ const cli = meow(`
 	Options
       --template            Name of the template(default:TypeScript)
       --default             Use default template
-      --yarn                User Yarn
+      --yarn                Use Yarn
 
 	Examples
 	  $ create-express-app

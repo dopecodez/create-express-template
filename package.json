@@ -1,9 +1,9 @@
 {
-  "name": "create-express-app",
+  "name": "create-express-template",
   "version": "1.0.0",
-  "description": "Create an express app template",
+  "description": "Create an express app template with various options",
   "bin": {
-    "create-express-app": "src/cli.js"
+    "create-express-template": "src/cli.js"
   },
   "scripts": {
     "test": "ava",
