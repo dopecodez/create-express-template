@@ -21,7 +21,7 @@ exports.editPackageJson = (path, projectName) => {
 }
 
 exports.installNodeModules = async (pkgManager, path) => {
-    const result = await exec(`${pkgManager} install`,
+    const result = await exec(pkgManager, ['install'],
         { cwd: path, stdio:"inherit" });
     return result;
 }
