@@ -17,11 +17,11 @@ const cli = meow(`
       --yarn                Use Yarn
 
 	Examples
-	  $ create-express-app
-	  $ create-express-app my-app
-	  $ create-express-app my-app -d
-	  $ create-express-app my-app --template=TypeScript-Inversify-TypeORM -y
-	  $ create-express-app my-app --template=tsti -y
+	  $ create-express-template
+	  $ create-express-template my-app
+	  $ create-express-template my-app -d
+	  $ create-express-template my-app --template=TypeScript-Inversify-TypeORM -y
+	  $ create-express-template my-app --template=tsti -y
 `, {
 	flags: {
 		template: {
