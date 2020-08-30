@@ -24,7 +24,7 @@ After starting, go to http://localhost:3000/ to see a simple page(3000 here bein
 
 - [Usage with options](#usage-with-options)
 - [Templates](#templates)
-- [Under the hood](#under-the-hood)
+- [Under The Hood](#under-the-hood)
 - [Contributing](#contributing)
 
 ## Usage with options
@@ -47,8 +47,8 @@ $ npx create-express-template --help
 	  $ create-express-app
 	  $ create-express-app my-app
 	  $ create-express-app my-app -d
-	  $ create-express-app my-app --template="TypeScript-Inversify-TypeORM" -y
-      $ create-express-app my-app --template="tsti" -y
+	  $ create-express-app my-app --template=TypeScript-Inversify-TypeORM -y
+      $ create-express-app my-app --template=tsti -y
 
 ```
 
@@ -58,7 +58,7 @@ Using the `default` option will use TypeScript as the template. If you aren't al
 
 If you want to use `yarn` as your package manager, specify the `yarn` option.
 
-The available templates(and what each of them should be user for) are listed [here](#templates).
+The available templates(you can use the full names or the initials) are listed [here](#templates).
 
 ## Templates
 
@@ -71,6 +71,23 @@ The available templates(and what each of them should be user for) are listed [he
 | TypeScript-Inversify          | tsi         | TS + [Inversify](https://github.com/inversify/InversifyJS)
 | TypeScript-TypeORM-Inversify  | tsit, tsti  | TS + [Inversify](https://github.com/inversify/InversifyJS) + [TypeORM](https://typeorm.io/#/)           
 
+**Note : The `template` option can take any of these template values or their initials.**
+
 We use [Sequelize](https://sequelize.org) for JavaScript and [TypeORM](https://typeorm.io/#/) for TypeScript and both are excellent ORMs. You can check out their pages for more information on creating models and writing queries.
 
 [Inversify](https://github.com/inversify/InversifyJS) is an excellent and lightweight inversion of control container for JavaScript & Node.js apps powered by TypeScript. For people unfamiliar with why you would want to have [Inversion of control](https://medium.com/@amitkma/understanding-inversion-of-control-ioc-principle-163b1dc97454), this one and many other articles can be found on the topic. Read up more on [Dependency Injection](https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/) and why and when you should use it to understand why `inversify` helps in building modern applications.
+
+## Under The Hood
+
+Internally, there are several things being setup in the templates. We use a module structure to separate our components, but you can change this if you want to.
+
+The unit tests are configured using [ava](https://github.com/avajs/ava), and all the templates come configured with at least one unit test. For logging, we use [Winston](https://github.com/winstonjs/winston) for its ease of use. The logging setup is currently very basic, and will log errors and info in two separate files.
+
+We also have `cors` enabled so as not to have errors. We use [eslint](https://eslint.org/) to maintain best coding practices. This can be hugely helpful if you want to maintain certain coding standards within your application.
+
+## Contributing
+
+Before opening a pull request please make sure your changes follow the
+[contribution guidelines][1].
+
+[1]: https://github.com/dopecodez/create-express-template/blob/master/CONTRIBUTING.md
