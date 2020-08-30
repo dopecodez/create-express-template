@@ -2,7 +2,7 @@
 
 Create a modern express server with a simple command.
 
-![Working sample](https://media.giphy.com/media/MC9h5ruPM0Wk7lJyxQ/giphy.gif)
+![Working sample](https://media.giphy.com/media/MC9h5ruPM0Wk7lJyxQ/giphy.gif =250x)
 
 Works on macOS, Windows, and Linux. Has both TypeScript and JavaScript templates inbuild. Creates all the boilerplate code along with build process and unit tests configured so that you can focus on the application logic.
 
