@@ -30,6 +30,13 @@
     "typeorm",
     "sequelize"
   ],
+  "dependencies": {
+    "edit-json-file": "^1.4.1",
+    "execa": "^4.0.3",
+    "inquirer": "^7.3.3",
+    "log-symbols": "^3.0.0",
+    "meow": "^6.0.0"
+  },
   "devDependencies": {
     "eslint": "^7.7.0",
     "ava": "^3.8.2"
