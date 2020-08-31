@@ -27,6 +27,7 @@
     "template",
     "generator",
     "inversify",
+    "inversion-of-control",
     "typeorm",
     "sequelize"
   ],
@@ -43,8 +44,7 @@
   },
   "ava": {
     "files": [
-      "test/*",
-      "!test/cliTester.js"
+      "test/*"
     ],
     "timeout": "1m"
   }
