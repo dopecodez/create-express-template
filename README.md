@@ -2,7 +2,7 @@
 
 Create a modern express server with a single command.
 
-<img src="working.gif" width="688">
+<img src="working.gif">
 
 Scale a development ready server in **one step**.
 
