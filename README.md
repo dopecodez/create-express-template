@@ -2,9 +2,9 @@
 
 Create a modern express server with a single command.
 
-![Working sample](https://media.giphy.com/media/MC9h5ruPM0Wk7lJyxQ/giphy.gif)
+![Working sample](https://media.giphy.com/media/ej7o4MAvd2LI4kOM6F/giphy.gif)
 
-Scale a development ready server in one step.
+Scale a development ready server in **one step**.
 
 Works on macOS, Windows, and Linux. Has both TypeScript and JavaScript templates inbuild. Creates all the boilerplate code along with build process and unit tests configured so that you can focus on the application logic.
 
@@ -18,7 +18,7 @@ $ cd my-app
 $ npm start
 ```
 
-We strongly suggest using npx from for npm versions 5.2+. You can also install create-express-template globally and use it to create a template anywhere in your system.
+We strongly suggest using npx from npm versions 5.2+. You can also install create-express-template globally and use it to create a template anywhere in your system.
 
 After running `npm start`, go to http://localhost:3000/ to see a simple page(3000 here being the port number, you can change this in the .env file). We also implement a sample route at http://localhost:3000/api/v1/users so you can start building immediately following the pattern.
 
