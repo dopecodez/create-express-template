@@ -2,7 +2,7 @@
 
 Create a modern express server with a single command.
 
-![Working sample](https://media.giphy.com/media/ej7o4MAvd2LI4kOM6F/giphy.gif)
+<img src="https://media.giphy.com/media/ej7o4MAvd2LI4kOM6F/giphy.gif" alt="Working sample" style="height: 100px; width:150px;"/>
 
 Scale a development ready server in **one step**.
 
