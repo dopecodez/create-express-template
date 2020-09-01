@@ -50,7 +50,7 @@ $ npx create-express-template --help
 	  $ create-express-template my-app
 	  $ create-express-template my-app -d
 	  $ create-express-template my-app --template=TypeScript-Inversify-TypeORM -y
-	  $ create-express-app my-template --template=tsti -y
+	  $ create-express-template my-app --template=tsti -y
 
 ```
 
@@ -58,7 +58,7 @@ The `folderName` and the `template` will be prompted to the user via the interac
 
 Using the `default` option will use TypeScript as the template. If you aren't already using TypeScript, read about why you should start using it [here](https://serokell.io/blog/why-typescript).
 
-If you want to use `yarn` as your package manager, specify the `yarn` option.
+If you want to use `yarn` as your package manager(by default we use `npm`), specify the `yarn` option.
 
 The available templates(you can use the full names or the initials) are listed [here](#templates).
 
@@ -75,7 +75,7 @@ The available templates(you can use the full names or the initials) are listed [
 
 **Note : The `template` option can take any of these template values or their initials.**
 
-We use [Sequelize](https://sequelize.org) for JavaScript and [TypeORM](https://typeorm.io/#/) for TypeScript and both are excellent ORMs. You can check out their pages for more information on creating models and writing queries. There is a sample model structure created so that you can follow the pattern and start building your models directly.
+We use [Sequelize](https://sequelize.org) for JavaScript and [TypeORM](https://typeorm.io/#/) for TypeScript and both are excellent ORMs. You can check out their pages for more information on creating models and writing queries. There is a sample model structure created so that you can follow the pattern and start building your models directly. All the values for the database port and name and other settings are stored in the `.env` file which you can change to whatever value which you want to use.
 
 [Inversify](https://github.com/inversify/InversifyJS) is an excellent and lightweight inversion of control container for JavaScript & Node.js apps powered by TypeScript. For people unfamiliar with why you would want to have [Inversion of control](https://medium.com/@amitkma/understanding-inversion-of-control-ioc-principle-163b1dc97454), this one and many other articles can be found on the topic. Read up more on [Dependency Injection](https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/) and why and when you should use it to understand why `inversify` helps in building modern applications.
 
@@ -84,6 +84,8 @@ We use [Sequelize](https://sequelize.org) for JavaScript and [TypeORM](https://t
 Internally, there are several things being setup in the templates. We use a module structure to separate our components, but you can change this if you want to.
 
 The unit tests are configured using [ava](https://github.com/avajs/ava), and all the templates come configured with at least one unit test. You can expand these tests using the sample structure provided or remove them completely if you want to. For logging, we use [Winston](https://github.com/winstonjs/winston) for its ease of use. The logging setup is currently very basic, and will log errors and info in two separate files.
+
+We use [dotenv](https://www.npmjs.com/package/dotenv) to manage our environment variables. Please note that all the ports and database names can be changed in the `.env` file to the value you want to use.
 
 We also have `cors` enabled so as not to have errors. We use [eslint](https://eslint.org/) to maintain best coding practices. This can be hugely helpful if you want to maintain certain coding standards within your application.
 
