@@ -1,6 +1,6 @@
 {
   "name": "create-express-template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create an express app template with various options",
   "bin": {
     "create-express-template": "src/cli.js"
