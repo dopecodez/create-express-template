@@ -1,6 +1,6 @@
 const { logger } = require('../../helpers/logger');
 
-class stringCountManager {
+class userManager {
     async getUsers() {
         // eslint-disable-next-line no-useless-catch
         try {
@@ -15,4 +15,4 @@ class stringCountManager {
     }
 }
 
-module.exports = new stringCountManager();
+module.exports = new userManager();
