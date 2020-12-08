@@ -1,4 +1,4 @@
-# CREATE-EXPRESS-TEMPLATE [![Build Status](https://travis-ci.org/dopecodez/create-express-template.svg?branch=master)](https://travis-ci.org/dopecodez/create-express-template) [![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dopecodez/create-express-template/issues)
+# CREATE-EXPRESS-TEMPLATE [![build](https://github.com/dopecodez/create-express-template/workflows/build/badge.svg)](https://github.com/dopecodez/create-express-template/actions) [![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dopecodez/create-express-template/issues)
 
 Create a modern express server with a single command.
 
